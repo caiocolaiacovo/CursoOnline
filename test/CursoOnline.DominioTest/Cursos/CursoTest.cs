@@ -54,8 +54,7 @@ namespace CursoOnline.DominioTest.Cursos
         [InlineData(null)]
         public void NaoDeveCursoTerUmNomeVazio(string nomeInvalido)
         {
-            Assert.Throws<ArgumentException>
-                (() => CursoBuilder.Novo().ComNome(nomeInvalido).Build())
+            Assert.Throws<ArgumentException>(() => CursoBuilder.Novo().ComNome(nomeInvalido).Build())
                 .ComMensagem("Nome inválido");
         }
 
@@ -64,8 +63,7 @@ namespace CursoOnline.DominioTest.Cursos
         [InlineData(-1)]
         public void NaoDeveCursoTerUmaCargaHorariaMenorQueUm(double cargaHorariaInvalida)
         {
-            Assert.Throws<ArgumentException>
-                (() => CursoBuilder.Novo().ComCargaHoraria(cargaHorariaInvalida).Build())
+            Assert.Throws<ArgumentException>(() => CursoBuilder.Novo().ComCargaHoraria(cargaHorariaInvalida).Build())
                 .ComMensagem("Carga horária inválida");
         }
 
@@ -74,8 +72,7 @@ namespace CursoOnline.DominioTest.Cursos
         [InlineData(-1)]
         public void NaoDeveCursoTerUmValorMenorQueUm(double valorInvalido)
         {
-            Assert.Throws<ArgumentException>
-                (() => CursoBuilder.Novo().ComValor(valorInvalido).Build())
+            Assert.Throws<ArgumentException>(() => CursoBuilder.Novo().ComValor(valorInvalido).Build())
                 .ComMensagem("Valor inválido");
         }
     }
